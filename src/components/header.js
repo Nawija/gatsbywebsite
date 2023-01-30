@@ -4,8 +4,12 @@ import { Link } from "gatsby"
 
 const Header = ({ siteTitle }) => {
   const [menuBtn, setMenu] = useState(false)
+  const [menuActive, active] = useState(false)
   const HandleMenu = () =>{
     setMenu(!menuBtn)
+  }
+  const Active = ()=>{
+    active(!menuActive)
   }
 
   return (
@@ -54,22 +58,23 @@ const Header = ({ siteTitle }) => {
             <li class="m-6 lg:m-0">
               <Link
                 href="/"
-                class=" text-indigo-500 text-base lg:text-lg font-semibold p-2"
+                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
               >
                 Home
               </Link>
             </li>
             <li class="m-6 lg:m-0">
               <Link
-                href="#price"
-                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 priceSection p-2"
+                to="/cennik"
+                class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
+                
               >
                 Cennik
               </Link>
             </li>
             <li class="m-6 lg:m-0">
               <Link
-                href="./src/html/showMore.html"
+                to="/pomoc"
                 class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
               >
                 Pomoc
@@ -77,7 +82,7 @@ const Header = ({ siteTitle }) => {
             </li>
             <li class="m-6 lg:m-0">
               <Link
-                href="./src/html/gallery.html"
+               to="/galeria"
                 class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
               >
                 Galeria
@@ -85,7 +90,7 @@ const Header = ({ siteTitle }) => {
             </li>
             <li class="m-6 lg:m-0">
               <Link
-                href="./src/html/contact.html"
+                to="/kontakt"
                 class=" text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
               >
                 Kontakt
@@ -93,7 +98,7 @@ const Header = ({ siteTitle }) => {
             </li>
             <li class="mb-12 mt-6">
               <Link
-                href="./src/html/contact.html"
+               to="/kontakt"
                 class="bg-indigo-400 hover:bg-indigo-600 focus-visible:ring lg:hidden ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-3 hover:text-white hover:shadow-inner"
               >
                 Darmowa Wycena
@@ -102,10 +107,10 @@ const Header = ({ siteTitle }) => {
           </ul>
 
           <Link
-            href="./src/html/contact.html"
-            class="opacity-0 lg:opacity-100 lg:inline-block my-auto bg-indigo-400 hover:bg-indigo-600 md:text-base focus-visible:ring ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-4 hover:text-white hover:shadow-inner"
+            to="/kontakt"
+            class="hidden lg:inline-block my-auto bg-indigo-400 hover:bg-indigo-600 md:text-base focus-visible:ring ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-4 hover:text-white hover:shadow-inner"
           >
-            Darmowa Wycena{" "}
+            Darmowa Wycena
           </Link>
 
           <button

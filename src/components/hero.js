@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import heroVideo from "../assets/heroVideo.mp4"
 
 const Hero = () => (
-  <section class="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48">
+  <section class="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48 mb-6">
     <video
       class="w-full h-full object-cover object-center absolute inset-0"
       src={heroVideo}
