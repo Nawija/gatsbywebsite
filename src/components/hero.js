@@ -25,19 +25,19 @@ const Hero = () => (
       </h2>
 
       <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
-        <a
-          href="./src/html/showMore.html"
+        <Link
+          to="/pomoc"
           class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200  hover:scale-105 px-8 py-3"
         >
           Wiecej Informacji
-        </a>
+        </Link>
 
-        <a
-          href="./src/html/gallery.html"
+        <Link
+          to="/galeria"
           class="inline-block bg-gray-200 hover:bg-gray-300 hover:text-white focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200 hover:scale-105 px-8 py-3"
         >
           Nasze Strony
-        </a>
+        </Link>
       </div>
     </div>
   </section>

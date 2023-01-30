@@ -19,7 +19,7 @@ const InfoSection = () => (
         </p>
       </div>
       <div class="flex items-center justify-center w-full md:w-1/3">
-        <img class="ml-[40vw] my-6 md:ml-12 h-auto" src={iPhone} />
+        <img alt="Photo iPhone 13 with page on screen" class="ml-[40vw] my-6 md:ml-12 h-auto" src={iPhone} />
       </div>
     </div>
     

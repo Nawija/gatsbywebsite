@@ -1,18 +1,18 @@
 var plugins = [{
       name: 'gatsby-plugin-image',
-      plugin: require('C:/Users/FS/Desktop/Sites/gatsbywebsite/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
+      plugin: require('/Users/kondziu/Desktop/Sites/gatsbywebsite/node_modules/gatsby-plugin-image/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'gatsby-plugin-manifest',
-      plugin: require('C:/Users/FS/Desktop/Sites/gatsbywebsite/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
+      plugin: require('/Users/kondziu/Desktop/Sites/gatsbywebsite/node_modules/gatsby-plugin-manifest/gatsby-ssr.js'),
       options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","display":"minimal-ui","icon":"src/images/logoBrowser.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"d78732002478dffe2ea3608955dd231d"},
     },{
       name: 'default-site-plugin',
-      plugin: require('C:/Users/FS/Desktop/Sites/gatsbywebsite/gatsby-ssr.js'),
+      plugin: require('/Users/kondziu/Desktop/Sites/gatsbywebsite/gatsby-ssr.js'),
       options: {"plugins":[]},
     },{
       name: 'partytown',
-      plugin: require('C:/Users/FS/Desktop/Sites/gatsbywebsite/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
+      plugin: require('/Users/kondziu/Desktop/Sites/gatsbywebsite/node_modules/gatsby/dist/internal-plugins/partytown/gatsby-ssr.js'),
       options: {"plugins":[]},
     }]
 /* global plugins */
