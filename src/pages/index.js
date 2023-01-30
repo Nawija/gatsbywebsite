@@ -3,51 +3,16 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-
-import heroVideo from "../video/heroVideo.mp4"
+import Hero from "../components/hero"
 
 const IndexPage = () => (
   <Layout>
-    <section class="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48">
-      <video
-        class="w-full h-full object-cover object-center absolute inset-0"
-        src={heroVideo}
-        autoPlay
-        muted
-        loop
-      /> 
 
-      <div class="bg-indigo-500 mix-blend-multiply absolute inset-0"></div>
-
-      <div class="sm:max-w-xl flex flex-col items-center relative p-4">
-        <p class="text-indigo-200 text-lg sm:text-xl text-center mb-4 md:mb-8">
-          Nowoczesny design
-        </p>
-        <h2 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-12">
-          Stwórz swoją wizytówkę w internecie z nami!
-        </h2>
-
-        <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
-          <a
-            href="./src/html/showMore.html"
-            class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200  hover:scale-105 px-8 py-3"
-          >
-            Wiecej Informacji
-          </a>
-
-          <a
-            href="./src/html/gallery.html"
-            class="inline-block bg-gray-200 hover:bg-gray-300 hover:text-white focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200 hover:scale-105 px-8 py-3"
-          >
-            Nasze Strony
-          </a>
-        </div>
-      </div>
-    </section>
+    <Hero />
 
     <section class="text-gray-800 body-font">
-      <div class="container px-5 py-12 mx-auto">
-        <div class="flex flex-col text-center w-full mb-20">
+      <div class="container px-5 mx-auto">
+        <div class="flex flex-col text-center p-12 w-full">
           <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
             Strony Internetowe z Systemami SEO
           </h2>
@@ -61,6 +26,10 @@ const IndexPage = () => (
             użytkownika i skutecznie promowały biznes naszych klientów.
           </p>
         </div>
+      </div>
+    </section>
+    <section>
+      <div class="container px-5 mx-auto">
         <div class="flex flex-wrap">
           <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
             <h2 class="text-lg sm:text-xl text-black font-medium title-font mb-2">

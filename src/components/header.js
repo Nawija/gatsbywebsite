@@ -11,7 +11,7 @@ const Header = ({ siteTitle }) => {
   return (
     <header class="sticky top-0 z-50 bg-white">
       <nav>
-        <div class="globalWrapper flex py-4 md:py-8 bg-white justify-between w-full px-7">
+        <div class="globalWrapper flex py-4 md:py-6 bg-white justify-between w-full px-7">
           <Link
             href="/"
             class="inline-flex items-center text-gray-700 text-2xl md:text-3xl font-bold gap-2.5"
