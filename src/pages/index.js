@@ -15,7 +15,7 @@ const IndexPage = () => (
         autoPlay
         muted
         loop
-      />
+      /> 
 
       <div class="bg-indigo-500 mix-blend-multiply absolute inset-0"></div>
 
