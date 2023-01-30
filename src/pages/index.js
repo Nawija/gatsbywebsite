@@ -1,128 +1,183 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-  },
-  {
-    text: "Examples",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
-    description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-  },
-]
-
-const samplePageLinks = [
-  {
-    text: "Page 2",
-    url: "page-2",
-    badge: false,
-    description:
-      "A simple example of linking to another page within a Gatsby site",
-  },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
-]
-
-const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
-  },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
-  },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
-  },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
-]
-
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+import heroVideo from "../video/heroVideo.mp4"
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
-        src="../images/example.png"
-        loading="eager"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
+    <section class="min-h-96 flex justify-center items-center flex-1 shrink-0 bg-gray-100 overflow-hidden shadow-lg rounded-lg relative py-16 md:py-20 xl:py-48">
+      <video
+        class="w-full h-full object-cover object-center absolute inset-0"
+        src={heroVideo}
+        autoPlay
+        muted
+        loop
       />
-      <h1>
-        Welcome to <b>Gatsby!</b>
-      </h1>
-      <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </>}
-          </React.Fragment>
-        ))}
-        <br />
-        Edit <code>src/pages/index.js</code> to update this page.
-      </p>
-    </div>
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
+
+      <div class="bg-indigo-500 mix-blend-multiply absolute inset-0"></div>
+
+      <div class="sm:max-w-xl flex flex-col items-center relative p-4">
+        <p class="text-indigo-200 text-lg sm:text-xl text-center mb-4 md:mb-8">
+          Nowoczesny design
+        </p>
+        <h2 class="text-white text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-12">
+          Stwórz swoją wizytówkę w internecie z nami!
+        </h2>
+
+        <div class="w-full flex flex-col sm:flex-row sm:justify-center gap-2.5">
           <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
+            href="./src/html/showMore.html"
+            class="inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200  hover:scale-105 px-8 py-3"
           >
-            {link.text} ↗
+            Wiecej Informacji
           </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
-      ))}
-    </ul>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </>}
-      </React.Fragment>
-    ))}
+
+          <a
+            href="./src/html/gallery.html"
+            class="inline-block bg-gray-200 hover:bg-gray-300 hover:text-white focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200 hover:scale-105 px-8 py-3"
+          >
+            Nasze Strony
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="text-gray-800 body-font">
+      <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">
+            Strony Internetowe z Systemami SEO
+          </h2>
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-black capitalize px-2">
+            Tworzenie stron internetowych
+          </h1>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Jako agencja stron internetowych, oferujemy szeroki zakres usług, od
+            projektowania i tworzenia stron pod kątem SEO, po ich hosting i
+            utrzymanie. Dbamy o to, aby nasze projekty były przyjazne dla
+            użytkownika i skutecznie promowały biznes naszych klientów.
+          </p>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class="text-lg sm:text-xl text-black font-medium title-font mb-2">
+              SEO
+            </h2>
+            <p class="leading-relaxed text-base mb-4">
+              Tworząc strony przyjazne dla SEO, skupiamy się na tym, aby
+              zwiększyć widoczność strony w wynikach wyszukiwania, poprawić jej
+              ranking i zwiększyć ruch na stronie. Dzięki temu, Twoja strona
+              internetowa będzie lepiej widoczna dla potencjalnych klientów
+            </p>
+            <a
+              href="./src/html/showMore.html#seo"
+              class="text-indigo-500 inline-flex items-center hover:tracking-widest transition-all duration-500"
+            >
+              Zobacz więcej
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-4 h-4 ml-2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class="text-lg sm:text-xl text-black font-medium title-font mb-2">
+              Design
+            </h2>
+            <p class="leading-relaxed text-base mb-4">
+              Nasze projekty to połączenie piękna i użyteczności, tworzymy
+              strony internetowe, które zachwycają swoim designem i skutecznie
+              promują biznes
+            </p>
+            <a
+              href="./src/html/showMore.html"
+              class="text-indigo-500 inline-flex items-center hover:tracking-widest transition-all duration-500"
+            >
+              Zobacz więcej
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-4 h-4 ml-2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class="text-lg sm:text-xl text-black font-medium title-font mb-2">
+              Krok Po Kroku
+            </h2>
+            <p class="leading-relaxed text-base mb-4">
+              Jeśli chcesz zakupić profesjonalną stronę internetową, jesteśmy
+              tutaj, aby Ci pomóc. Przeprowadzimy Cię przez cały proces zakupu,
+              krok po kroku, aby zapewnić Ci najlepsze rozwiązania dostosowane
+              do Twoich potrzeb i wymagań
+            </p>
+            <a
+              href="./src/html/showMore.html"
+              class="text-indigo-500 inline-flex items-center hover:tracking-widest transition-all duration-500"
+            >
+              Zobacz więcej
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-4 h-4 ml-2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+            <h2 class="text-lg sm:text-xl text-black font-medium title-font mb-2">
+              Regulamin
+            </h2>
+            <p class="leading-relaxed text-base mb-4">
+              warunki i zasady zakupu strony internetowej od naszej firmy.
+              Zawiera on informacje dotyczące cen, warunków płatności, terminów
+              realizacji, prawa autorskiego oraz warunków gwarancji i serwisu
+            </p>
+            <a
+              href="./src/html/showMore.html"
+              class="text-indigo-500 inline-flex items-center hover:tracking-widest transition-all duration-500"
+            >
+              Zobacz więcej
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-4 h-4 ml-2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 12h14M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   </Layout>
 )
 
-/**
- * Head export to define metadata for the page
- *
- * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
- */
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
