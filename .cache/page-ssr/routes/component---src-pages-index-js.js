@@ -49,29 +49,30 @@ const Header = ({
   siteTitle
 }) => {
   const {
-    0: menuBtn,
+    0: showNav,
     1: setMenu
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
-  const {
-    0: menuActive,
-    1: active
-  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
   const HandleMenu = () => {
-    setMenu(!menuBtn);
+    setMenu(!showNav);
   };
-  const Active = () => {
-    active(!menuActive);
-  };
+  const linkStyle = `
+  flex 
+  items-center
+  text-gray-700
+   text-2xl
+    md:text-3xl 
+    font-bold gap-2.5
+    `;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("header", {
-    class: "sticky top-0 z-50 bg-white"
+    className: "sticky top-0 z-50 bg-white"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("nav", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-    class: "globalWrapper flex py-4 md:py-6 bg-white justify-between w-full px-7"
+    className: "globalWrapper flex py-4 md:py-6 bg-white justify-between w-full px-7"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
-    class: "inline-flex items-center text-gray-700 text-2xl md:text-3xl font-bold gap-2.5",
+    to: "/",
+    className: "flex items-center gap-2.5 text-2xl font-semibold text-gray-800",
     "aria-label": "logo"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
-    class: "w-11 h-auto",
+    className: "w-11 h-auto",
     width: "100",
     height: "104",
     viewBox: "0 0 100 104",
@@ -95,47 +96,47 @@ const Header = ({
     offset: "1",
     "stop-color": "#424FBF"
   })))), "Benotive"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("ul", {
-    class: menuBtn ? "absolute left-0 flex items-center justify-center w-full flex-col bg-white transition-all duration-500 z-[-1] lg:static lg:flex-row lg:opacity-100 lg:w-auto lg:z-[50]" : "absolute left-0 flex items-center justify-center w-full flex-col bg-white transition-all duration-500 z-[-1] lg:static lg:flex-row lg:opacity-100 lg:w-auto lg:z-[50] opacity-0 -translate-y-[400%] lg:translate-y-0"
+    className: showNav ? "absolute left-0 top-full shadow-xl flex items-center justify-center w-full flex-col bg-white transition-all duration-500 z-[-1] lg:static lg:flex-row lg:opacity-100 lg:w-auto lg:z-[50]" : "absolute left-0 flex items-center justify-center w-full flex-col bg-white transition-all duration-500 z-[-1] lg:static lg:flex-row lg:opacity-100 lg:w-auto lg:z-[50] opacity-0 -translate-y-[400%] lg:translate-y-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "m-6 lg:m-0"
+    className: "m-6 lg:m-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-    href: "/",
-    class: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
+    to: "/",
+    className: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
   }, "Home")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "m-6 lg:m-0"
+    className: "m-6 lg:m-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/cennik",
-    class: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
+    className: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100 p-2"
   }, "Cennik")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "m-6 lg:m-0"
+    className: "m-6 lg:m-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/pomoc",
-    class: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
+    className: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
   }, "Pomoc")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "m-6 lg:m-0"
+    className: "m-6 lg:m-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/galeria",
-    class: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
+    className: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
   }, "Galeria")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "m-6 lg:m-0"
+    className: "m-6 lg:m-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/kontakt",
-    class: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
+    className: " text-gray-800 hover:text-indigo-500 active:text-indigo-700 text-base lg:text-lg font-semibold transition duration-100  p-2"
   }, "Kontakt")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("li", {
-    class: "mb-12 mt-6"
+    className: "mb-12 mt-6"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/kontakt",
-    class: "bg-indigo-400 hover:bg-indigo-600 focus-visible:ring lg:hidden ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-3 hover:text-white hover:shadow-inner"
+    className: "bg-indigo-400 hover:bg-indigo-600 focus-visible:ring lg:hidden ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-3 hover:text-white hover:shadow-inner"
   }, "Darmowa Wycena"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/kontakt",
-    class: "hidden lg:inline-block my-auto bg-indigo-400 hover:bg-indigo-600 md:text-base focus-visible:ring ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-4 hover:text-white hover:shadow-inner"
+    className: "hidden lg:inline-block my-auto bg-indigo-400 hover:bg-indigo-600 md:text-base focus-visible:ring ring-indigo-300 text-white shadow-md active:text-gray-700 text-sm font-semibold text-center rounded-lg outline-none transition duration-200 px-8 py-4 hover:text-white hover:shadow-inner"
   }, "Darmowa Wycena"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
     onClick: HandleMenu,
     type: "button",
-    class: "inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-4 py-2"
+    className: "inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-4 py-4 my-auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    className: menuBtn ? 'hidden ionicon h-6 w-6' : 'ionicon h-6 w-6',
+    className: showNav ? "hidden ionicon h-6 w-6" : "ionicon h-6 w-6",
     viewBox: "0 0 20 20",
     fill: "currentColor"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
@@ -144,7 +145,7 @@ const Header = ({
     "clip-rule": "evenodd"
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    className: menuBtn ? 'ionicon h-6 w-6' : 'hidden ionicon h-6 w-6',
+    className: showNav ? "ionicon h-6 w-6" : "hidden ionicon h-6 w-6",
     viewBox: "0 0 512 512"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("title", null, "Close"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
     d: "M289.94 256l95-95A24 24 0 00351 127l-95 95-95-95a24 24 0 00-34 34l95 95-95 95a24 24 0 1034 34l95-95 95 95a24 24 0 0034-34z"
@@ -190,14 +191,52 @@ const Hero = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement
   class: "text-white text-4xl sm:text-5xl md:text-6xl font-bold text-center mb-8 md:mb-12"
 }, "Stw\xF3rz swoj\u0105 wizyt\xF3wk\u0119 w internecie z nami!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
   class: "w-full flex flex-col sm:flex-row sm:justify-center gap-2.5"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-  href: "./src/html/showMore.html",
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  to: "/pomoc",
   class: "inline-block bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200  hover:scale-105 px-8 py-3"
-}, "Wiecej Informacji"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-  href: "./src/html/gallery.html",
+}, "Wiecej Informacji"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  to: "/galeria",
   class: "inline-block bg-gray-200 hover:bg-gray-300 hover:text-white focus-visible:ring ring-indigo-300 text-gray-500 active:text-gray-700 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-200 hover:scale-105 px-8 py-3"
 }, "Nasze Strony"))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Hero);
+
+/***/ }),
+
+/***/ "./src/components/infoGatsby.js":
+/*!**************************************!*\
+  !*** ./src/components/infoGatsby.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _images_gatsbyGraph_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../images/gatsbyGraph.png */ "./src/images/gatsbyGraph.png");
+
+
+const InfoGatsby = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
+  class: "text-gray-800 bg-gradient-to-tr from-slate-100 to-indigo-400 body-font overflow-hidden "
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  class: "flex items-center flex-wrap justify-center globalWrapper px-5 py-8 mx-auto"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  class: "order-0 md:order-1 flex flex-col items-center flex-wrap justify-center py-6 px-[4vw] md:w-1/2"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
+  class: "text-base md:text-lg text-white tracking-widest font-medium title-font mb-1"
+}, "Tylko Najlepsze Technologie"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
+  class: "text-center lg:text-4xl md:text-3xl sm:text-3xl text-3xl font-mono font-medium title-font mb-4 text-black capitalize"
+}, "100x Szybszy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  class: "text-center md:text-start w-full lg:w-3/4 mx-auto leading-relaxed text-base md:text-lg lg:text-xl"
+}, "Jako agencja stron internetowych, oferujemy szeroki zakres us\u0142ug, od projektowania i tworzenia stron pod k\u0105tem SEO, po ich hosting i utrzymanie. Dbamy o to, aby nasze projekty by\u0142y przyjazne dla u\u017Cytkownika i skutecznie promowa\u0142y biznes naszych klient\xF3w.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  class: "flex items-center justify-center w-full md:w-1/2"
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
+  alt: "Photo Gatsby win with wordpress, joomla",
+  class: "mt-2 py-6 md:ml-12 h-auto",
+  src: _images_gatsbyGraph_png__WEBPACK_IMPORTED_MODULE_1__["default"]
+}))));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoGatsby);
 
 /***/ }),
 
@@ -223,15 +262,16 @@ const InfoSection = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.create
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
   class: "flex flex-col items-center flex-wrap justify-center py-6 px-[4vw] md:w-2/3"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-xs text-indigo-500 tracking-widest font-medium title-font mb-1"
+  class: "text-sm md:text-lg text-indigo-500 tracking-widest font-medium title-font mb-1"
 }, "Strony Internetowe z Systemami SEO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", {
-  class: "text-center sm:text-3xl text-2xl font-medium title-font mb-4 text-black capitalize"
+  class: "text-center lg:text-4xl md:text-3xl sm:text-3xl text-2xl font-medium title-font mb-4 text-black capitalize"
 }, "Tworzenie stron internetowych"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "text-center md:text-start lg:w-2/3 mx-auto leading-relaxed text-base"
+  class: "text-center md:text-start lg:w-3/4 mx-auto leading-relaxed text-base md:text-lg lg:text-xl"
 }, "Jako agencja stron internetowych, oferujemy szeroki zakres us\u0142ug, od projektowania i tworzenia stron pod k\u0105tem SEO, po ich hosting i utrzymanie. Dbamy o to, aby nasze projekty by\u0142y przyjazne dla u\u017Cytkownika i skutecznie promowa\u0142y biznes naszych klient\xF3w.")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "flex items-center justify-center w-full md:w-1/3"
+  class: "flex items-center justify-center w-full md:w-1/3 mb-12"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
-  class: "ml-[40vw] my-6 md:ml-12 h-auto",
+  alt: "Photo iPhone 13 with page on screen",
+  class: "ml-[40vw] mt-12 py-6 md:ml-12 h-auto",
   src: _images_iPhone_png__WEBPACK_IMPORTED_MODULE_1__["default"]
 }))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoSection);
@@ -293,310 +333,305 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const Price = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("section", {
-  class: "text-gray-800 body-font overflow-hidden globalWrapper py-6 px-4"
+  className: "text-gray-800 body-font overflow-hidden py-8 px-4"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "container px-1 mx-auto"
+  className: "globalWrapper px-1 mx-auto"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "flex flex-col text-center w-full"
+  className: "flex flex-col text-center w-full"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h3", {
-  class: "sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900"
+  className: "text-2xl lg:text-3xl font-medium title-font mb-2 text-gray-900"
 }, "Cennik"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500"
-}, "Nie trzeba przep\u0142aca\u0107 za swoj\u0105 stron\u0119 internetow\u0105! Nasze ceny s\u0105 przyst\u0119pne dla ka\u017Cdego i dopasowujemy je do indywidualnych potrzeb ka\u017Cdego klienta. Skontaktuj si\u0119 z nami, aby uzyska\u0107 ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  classNameName: "text-center lg:w-3/4 mx-auto leading-relaxed text-lg mb-6 px-4"
+}, "Nie trzeba przep\u0142aca\u0107 za swoj\u0105 stron\u0119 internetow\u0105! Nasze ceny s\u0105 przyst\u0119pne dla ka\u017Cdego i dopasowujemy je do indywidualnych potrzeb ka\u017Cdego klienta. Skontaktuj si\u0119 z nami, aby uzyska\u0107", " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
   to: "/kontakt",
-  class: "underline text-indigo-500 font-semibold hover:text-indigo-600 transition-colors duration-500"
-}, "darmow\u0105 wycen\u0119"), " i rozpocz\u0105\u0107 wsp\xF3\u0142prac\u0119 ju\u017C dzi\u015B!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "flex flex-wrap"
+  className: "underline text-indigo-500 font-semibold hover:text-indigo-600 transition-colors duration-500"
+}, "darmow\u0105 wycen\u0119"), " ", "i rozpocz\u0105\u0107 wsp\xF3\u0142prac\u0119 ju\u017C dzi\u015B!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
+  className: "flex flex-wrap"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "py-4 lg:px-10 lg:py-6 xl:w-1/3 md:w-1/2 w-full mx-auto "
+  className: "py-4 px-4   lg:px-10 lg:py-6 xl:w-1/3 md:w-1/2 w-full mx-auto "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "group h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500"
+  className: "group h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-sm tracking-widest title-font mb-1 font-medium"
+  className: "text-sm tracking-widest title-font mb-1 font-medium"
 }, "BASE"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"
+  className: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "$300"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "text-lg ml-1 font-normal text-gray-500"
+  className: "text-lg ml-1 font-normal text-gray-500"
 }, "/z\u0142")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-800 mb-2"
+  className: "flex items-center text-gray-800 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Strona One Page"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-800 mb-2"
+  className: "flex items-center text-gray-800 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Darmowy Roczny Hosting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-800 mb-6"
+  className: "flex items-center text-gray-800 mb-6"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "2 Darmowe Modyfikacje"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-  class: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none rounded group-hover:bg-gray-700 transition-colors duration-500"
+  className: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none rounded group-hover:bg-gray-700 transition-colors duration-500"
 }, "Sprawdz", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  class: "w-4 h-4 ml-auto",
+  className: "w-4 h-4 ml-auto",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M5 12h14M12 5l7 7-7 7"
 }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "text-xs text-gray-500 mt-3"
+  className: "text-xs text-gray-500 mt-3"
 }, "Termin Realizacji od 4 do 10 dni"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "py-4 lg:px-10 xl:w-1/3 md:w-1/2 w-full mx-auto"
+  className: "py-4 px-4  lg:px-10 xl:w-1/3 md:w-1/2 w-full mx-auto"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "group h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500"
+  className: "group h-full p-6 rounded-lg border-2 border-indigo-500 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl group-hover:bg-amber-400 transition-colors duration-500"
+  className: "bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl group-hover:bg-amber-400 transition-colors duration-500"
 }, "POPULARNY"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-sm tracking-widest title-font mb-1 font-medium"
+  className: "text-sm tracking-widest title-font mb-1 font-medium"
 }, "PRO"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200 group-hover:border-white transition-colors duration-500"
+  className: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200 group-hover:border-white transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "$500"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "text-lg ml-1 font-normal text-gray-500 "
+  className: "text-lg ml-1 font-normal text-gray-500 "
 }, "/z\u0142")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-800 mb-2"
+  className: "flex items-center text-gray-800 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Strona Multi Page do 5 stron"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-800 mb-2"
+  className: "flex items-center text-gray-800 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Pi\u0119kne Unikalne Animacje"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
-}))), "Darmowy Roczny ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-  class: "ml-1 underline text-indigo-500",
-  href: "./src/html/showMore.html#hosting"
-}, "Hosting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+}))), "Darmowy Roczny Hosting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "3 Darmowe Modyfikacje"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-6"
+  className: "flex items-center text-gray-600 mb-6"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Roczna Opieka 24/7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-  class: "flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded group-hover:bg-gray-700 transition-colors duration-500"
+  className: "flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded group-hover:bg-gray-700 transition-colors duration-500"
 }, "Sprawdz", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  class: "w-4 h-4 ml-auto",
+  className: "w-4 h-4 ml-auto",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M5 12h14M12 5l7 7-7 7"
 }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "text-xs text-gray-500 mt-3"
+  className: "text-xs text-gray-500 mt-3"
 }, "Termin Realizacji od 4 do 10 dni"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "py-4 lg:px-10 lg:py-6 xl:w-1/3 md:w-1/2 w-full mx-auto"
+  className: "py-4 px-4 lg:px-10 lg:py-6 xl:w-1/3 md:w-1/2 w-full mx-auto"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
-  class: "group h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500 "
+  className: "group h-full p-6 rounded-lg border-2 border-gray-300 flex flex-col relative overflow-hidden hover:scale-105 hover:rotate-2 ease-in-out hover:border-amber-300 hover:shadow-lg transition-all duration-500 "
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-sm tracking-widest title-font mb-1 font-medium"
+  className: "text-sm tracking-widest title-font mb-1 font-medium"
 }, "SPECIAL"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h2", {
-  class: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"
+  className: "text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", null, "$1200"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "text-lg ml-1 font-normal text-gray-500"
+  className: "text-lg ml-1 font-normal text-gray-500"
 }, "/z\u0142")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Strona Bez Limit\xF3w"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Unikalne Animacje"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Bez Limitu Modyfikacji"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Wdr\u0105\u017Cenie ka\u017Cdego pomys\u0142u"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
 }))), "Darmowy Projekt Strony"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-2"
+  className: "flex items-center text-gray-600 mb-2"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
-}))), "Darmowy 3 Letni ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("a", {
-  class: "ml-1 underline text-indigo-500",
-  href: "./src/html/showMore.html#hosting"
-}, "Hosting")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "flex items-center text-gray-600 mb-6"
+}))), "Darmowy 3 Letni Hosting"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
+  className: "flex items-center text-gray-600 mb-6"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("span", {
-  class: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
+  className: "w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-400 text-white rounded-full flex-shrink-0 group-hover:bg-green-500 transition-colors duration-500"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2.5",
-  class: "w-3 h-3",
+  className: "w-3 h-3",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M20 6L9 17l-5-5"
-}))), "Unikalny Design"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("button", {
-  class: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none rounded group-hover:bg-gray-700 transition-colors duration-500"
+}))), "Unikalny Design"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+  to: "/plan/special",
+  className: "flex items-center mt-auto text-white bg-gray-400 border-0 py-2 px-4 w-full focus:outline-none rounded group-hover:bg-gray-700 transition-colors duration-500"
 }, "Sprawdz", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
   fill: "none",
   stroke: "currentColor",
   "stroke-linecap": "round",
   "stroke-linejoin": "round",
   "stroke-width": "2",
-  class: "w-4 h-4 ml-auto",
+  className: "w-4 h-4 ml-auto",
   viewBox: "0 0 24 24"
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("path", {
   d: "M5 12h14M12 5l7 7-7 7"
 }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("p", {
-  class: "text-xs text-gray-500 mt-3"
+  className: "text-xs text-gray-500 mt-3"
 }, "Termin Realizacji od 4 do 10 dni"))))));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Price);
 
@@ -678,12 +713,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var gatsby__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gatsby */ "./.cache/gatsby-browser-entry.js");
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
-/* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/seo */ "./src/components/seo.js");
-/* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/hero */ "./src/components/hero.js");
-/* harmony import */ var _components_price__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/price */ "./src/components/price.js");
-/* harmony import */ var _components_infoSection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/infoSection */ "./src/components/infoSection.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./src/components/layout.js");
+/* harmony import */ var _components_seo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/seo */ "./src/components/seo.js");
+/* harmony import */ var _components_hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/hero */ "./src/components/hero.js");
+/* harmony import */ var _components_price__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/price */ "./src/components/price.js");
+/* harmony import */ var _components_infoSection__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/infoSection */ "./src/components/infoSection.js");
+/* harmony import */ var _components_infoGatsby__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/infoGatsby */ "./src/components/infoGatsby.js");
 
 
 
@@ -691,11 +726,25 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const IndexPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_hero__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_infoSection__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_price__WEBPACK_IMPORTED_MODULE_5__["default"], null));
-const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_seo__WEBPACK_IMPORTED_MODULE_3__["default"], {
+const IndexPage = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_hero__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_infoSection__WEBPACK_IMPORTED_MODULE_5__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_infoGatsby__WEBPACK_IMPORTED_MODULE_6__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_price__WEBPACK_IMPORTED_MODULE_4__["default"], null));
+const Head = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_seo__WEBPACK_IMPORTED_MODULE_2__["default"], {
   title: "Home"
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
+
+/***/ }),
+
+/***/ "./src/images/gatsbyGraph.png":
+/*!************************************!*\
+  !*** ./src/images/gatsbyGraph.png ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/static/gatsbyGraph-d007f55023b00e1d166e8b8e6f883929.png");
 
 /***/ }),
 

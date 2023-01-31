@@ -19,7 +19,7 @@ const InfoGatsby = () => (
         </p>
       </div>
       <div class="flex items-center justify-center w-full md:w-1/2">
-        <img alt="Photo Gatsby win with wordpress, joomla" class="mt-2 py-6 md:ml-12 h-auto" src={gatsbyGraph} />
+        <img alt="Gatsby Win with wordpress, joomla" class="mt-2 py-6 md:ml-12 h-auto" src={gatsbyGraph} />
       </div>
     </div>
     

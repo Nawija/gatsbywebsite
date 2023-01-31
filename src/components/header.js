@@ -7,15 +7,6 @@ const Header = ({ siteTitle }) => {
   const HandleMenu = () => {
     setMenu(!showNav)
   }
-  const linkStyle = `
-  flex 
-  items-center
-  text-gray-700
-   text-2xl
-    md:text-3xl 
-    font-bold gap-2.5
-    `
-
   return (
     <header className="sticky top-0 z-50 bg-white">
       <nav>

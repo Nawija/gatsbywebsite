@@ -1,3 +1,6 @@
+npm install --platform=darwin --arch=x64 sharp
+npm rebuild --platform=darwin --arch=arm64 sharp
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
